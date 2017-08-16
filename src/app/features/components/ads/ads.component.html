@@ -1,0 +1,12 @@
+<ng-container [ngSwitch]="pos">
+	<img *ngSwitchCase="'top'" src="assets/images/header-top-img.png" alt="top" width="468" height="60">
+	<a *ngSwitchCase="'sidebar'">
+		<img src="assets/images/sideradv.png" alt="sidebar" width="300" height="250">
+	</a>
+	<a *ngSwitchCase="'content'">
+		<img src="assets/images/goodleadv.png" alt="content" width="728" height="90">
+	</a>
+	<a *ngSwitchCase="'bottom'">
+		<img src="assets/images/goodleadv.png" alt="bottom" width="728" height="90">
+	</a>
+</ng-container>

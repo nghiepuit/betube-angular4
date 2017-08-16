@@ -1,0 +1,45 @@
+<!-- lastest video -->
+<!-- panel title -->
+<div class="main-heading borderBottom" [app-panel-title]="title"></div>
+<!-- end panel title -->
+<div class="row">
+    <div class="large-12 columns">
+        <div class="row column head-text clearfix">
+            <p class="pull-left">All Videos : <span>1,862 Videos posted</span></p>
+            <div class="grid-system pull-right show-for-large">
+                <a class="secondary-button grid-default" [class.current]="layout == 'grid-default'" (click)="setLayout('grid-default')">
+                    <i class="fa fa-th"></i>
+                </a>
+                <a class="secondary-button grid-medium" [class.current]="layout == 'grid-medium'" (click)="setLayout('grid-medium')">
+                    <i class="fa fa-th-large"></i>
+                </a>
+                <a class="secondary-button list" [class.current]="layout == 'list'" (click)="setLayout('list')">
+                    <i class="fa fa-th-list"></i>
+                </a>
+            </div>
+        </div>
+        <div class="tabs-content" data-tabs-content="newVideos">
+            <div class="tabs-panel is-active" id="new-all">
+                <div class="row list-group">
+                	<!-- Video -->
+                	<!-- Nếu là video cuối cùng add thêm class end -->
+                    <div class="item large-4 medium-6 columns {{ layout }}">
+                    	<app-video></app-video>
+                    </div>
+                    <div class="item large-4 medium-6 columns {{ layout }}">
+                    	<app-video></app-video>
+                    </div>
+                    <div class="item large-4 medium-6 columns {{ layout }}">
+                    	<app-video></app-video>
+                    </div>
+                    <div class="item large-4 medium-6 columns {{ layout }} end">
+                        <app-video></app-video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center row-btn">
+            <a class="button radius" href="#">View All Video</a>
+        </div>
+    </div>
+</div>
